@@ -1,0 +1,15 @@
+Esta es la documentación del script de borrado de archivos
+Uso:
+./borrar.sh /direccion/del/archivo/a/borrar.txt
+
+Parámetros:
+ - 'archivo=$1': Representa el archivo que se desea borrar
+ 
+Funcionamiento
+ - El script toma el primer argumento proporcionado ($1), que es el nombre del archivo a borrar.
+- Define la variable directorio con la ruta de la papelera (~/.local/share/Trash/files).
+- Muestra un mensaje indicando que el script se ha iniciado.
+- Mueve el archivo especificado a la papelera con el comando mv.
+- Muestra un mensaje indicando que el archivo ha sido eliminado.
+
+
