@@ -1,2 +1,1 @@
-# Administracion-de-Servidores
-Se suben códigos realizados en la Experiencia educativa de Administración de Servidores
+Este repositorio ha sido creado para subir todos los códigos realizados en la Experiencia educativa de Administración de Servidores
