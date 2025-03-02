@@ -1,0 +1,15 @@
+Esta es la documentación del script de recuperación de archivos
+Uso:
+./recuperar.sh /direccion/del/archivo/borrado /direccion/del/archivo/a/recuperar
+
+Parámetros:
+ - 'archivorec=$1': Representa el archivo que se desea recuperar
+ - 'directorio=$2': Representa el directorio en que se desea almacenar el archivo que ha sido borrado
+ 
+Funcionamiento
+- El script toma el primer argumento proporcionado ($1), que es la direccion del archivo a recuperar.
+- Toma el segundo argumento proporcionado ($2), que es la dirección en donde se va a guardar el archivo recuperado.
+- Muestra un mensaje indicando que el script se ha iniciado.
+- Mueve el archivo especificado a la dirección que se había especificado antes con el comando mv.
+- Muestra un mensaje indicando que el archivo ha sido recuperado.
+
