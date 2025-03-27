@@ -4,6 +4,7 @@
 validar_contrasena() {
     local contrasena="$1"
     local length=${#contrasena}
+    local MIN_LENGHT=8
     
     if (( length < MIN_LENGTH )); then
         echo "La contraseña debe tener al menos $MIN_LENGTH caracteres."
