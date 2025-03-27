@@ -1,0 +1,36 @@
+Este script en Bash permite crear usuarios de manera interactiva; solicita la información básica para su creación: nombre de usuario, nombre, nombre del directorio "/home", el tipo de shell que ocupará y la contraseña con la que iniciará sesión
+
+Uso:
+sudo ./gestionUsu0.sh
+
+-------- Explicación: --------
+1. Función 'validar contrasena':
+	- Tiene como parámetro la contraseña ingresa por el usuario
+	- La contraseña debe tener una longitud mínima
+	- Debe contener al menos una mayúscula
+	- Debe contener al menos una minúscula
+	- Debe contener al menos un número
+	- Debe contener al menos un carácter especial (!@#$%^&*)
+	
+2. Solicitud de datos del usuario:
+	- usuario: Nombre de usuario con el que se iniciará sesión
+	- nombre: Nombre completo del usuario
+	- directorio: Directorio donde se almacenarán todos los archivos del usuario
+	- shell: Shell predeterminado para el usuario
+	
+3. Solicitud y validación de contraseña:
+	- El script solicita la contraseña dos veces para evitar errores y después manda a llamar a la función 'validar_contrasena'
+	- read -s: evita que las contraseñas se muestren en pantalla
+	- Si las contraseñas no son iguales se piden nuevamente
+	- Si la contraseña no cumple con la funcion de validación se vuelve a pedir
+	
+4. Creación del usuario:
+	- Si todo responde bien se crea el usuario con 'useradd'
+	- '-c "$nombre"': Agrega el nombre completo del usuario
+	- '-d "$directorio"': Define el directorio de inicio
+	- '-m': Crea automáticamente el directorio de inicio si no existe
+	- '-s "$shell"': Define el shell de inicio
+
+5. Asignación de contraseña y expiración
+	- chpasswd: Asigna la contraseña de forma segura sin usar passwd interactivo
+	- paswd -e: obliga al usuario a cambiar la contraseña en su primer inicio de sesión
